@@ -123,8 +123,8 @@ echo "$so2"
 #CREATE DATABASE IF NOT EXISTS OCS_PANEL;EXIT;
 
 chmod 777 /home/vps/public_html/config
-chmod 777 /home/vps/public_html/config/inc.php
-chmod 777 /home/vps/public_html/config/route.php
+chmod 777 /home/vps/public_html/config/config.ini
+chmod 777 /home/vps/public_html/config/route.ini
 
 apt-get -y --force-yes -f install libxml-parser-perl
 
