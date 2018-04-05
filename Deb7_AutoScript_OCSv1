@@ -5,6 +5,7 @@
 # Initializing Var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
+MYIP=$(wget -qO- ipv4.icanhazip.com);
 
 # go to root
 cd
