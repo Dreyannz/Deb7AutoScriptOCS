@@ -50,7 +50,7 @@ echo -e "\e[94m             Default Values Are Given,            "
 echo -e "\e[94m             Please Change If You Want            "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m  What will be the password for MySQL root User?  "
-read -p "          Root Password   :  " -e -i Deb7OCSv1 DatabasePass
+read -p "          Root Password   :  " -e -i Deb7OCSv2 DatabasePass
 echo -e "\e[94m                                                  "
 echo -e "\e[94m         What will be the DataBase Name?          "
 read -p "          Database Name   :  " -e -i OCS_PANEL DatabaseName
