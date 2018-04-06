@@ -31,3 +31,4 @@ read -p "     Select an option [1-2]: " option
         ./Deb7_AutoScript_OCSv1
         exit
         ;;
+  esac
