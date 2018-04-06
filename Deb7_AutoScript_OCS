@@ -1,0 +1,33 @@
+#!/bin/bash
+
+clear
+echo -e "                                                        "
+echo -e "\e[94m   :::::::::  :::::::::: :::::::::  :::::::::::   "
+echo -e "\e[94m   :+:    :+: :+:        :+:    :+: :+:     :+:   "
+echo -e "\e[94m   +:+    +:+ +:+        +:+    +:+        +:+    "
+echo -e "\e[94m   #+     +:+ +#++:++#   +#++:++#+        +#+     "
+echo -e "\e[94m   +#+    +#+ +#+        +#+    +#+      +#+      "
+echo -e "\e[94m   #+#    #+# #+#        #+#    #+#     #+#       "
+echo -e "\e[94m   #########  ########## #########      ###       "
+echo -e "\e[94m         Deb7AutoScriptOCS by _Dreyannz_          "
+echo -e "\e[94m                                                  "
+echo -e "\e[94m     Which Version Will You Choose To Install?    "
+echo -e "\e[94m        1) Deb7AutoScriptOCSv1                    "
+echo -e "\e[94m        2) Deb7AutoScriptOCSv2                    "
+echo -e "\e[94m                                                  "
+read -p "     Select an option [1-2]: " option
+  case $option in
+        1)
+        clear
+        wget https://raw.githubusercontent.com/Dreyannz/Deb7AutoScriptOCS/master/Deb7_AutoScript_OCSv1
+        chmod +x Deb7_AutoScript_OCSv1
+        ./Deb7_AutoScript_OCSv1
+        exit
+        ;;
+        2)
+        clear
+        wget https://raw.githubusercontent.com/Dreyannz/Deb7AutoScriptOCS/master/Deb7_AutoScript_OCSv1
+        chmod +x Deb7_AutoScript_OCSv1
+        ./Deb7_AutoScript_OCSv1
+        exit
+        ;;
