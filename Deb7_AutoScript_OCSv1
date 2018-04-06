@@ -1,20 +1,35 @@
 #!/bin/bash
-# Remod by _Dreyannz_
-# ==================================================
 
-# Initializing Var
+if [ $USER != 'root' ]; then
+	echo "You must run this as root"
+	exit
+fi
+
+# initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
-MYIP=$(wget -qO- ipv4.icanhazip.com);
+
+if [[ -e /etc/debian_version ]]; then
+	#OS=debian
+	RCLOCAL='/etc/rc.local'
+else
+	echo "You are not running this script on Debian OS"
+	exit
+fi
+
+vps="vps";
+
+if [[ $vps = "vps" ]]; then
+	source="https://raw.githubusercontent.com/Dreyannz/Deb7AutoScriptOCSv1/master"
+else
+	source="https://raw.githubusercontent.com/Dreyannz/Deb7AutoScriptOCSv1/master"
+fi
 
 # go to root
 cd
 
-# set time GMT +7
-ln -fs /usr/share/zoneinfo/Asia/Manila /etc/localtime
+MYIP=$(wget -qO- ipv4.icanhazip.com);
 
-# update
-apt-get -y update
 
 #https://github.com/adenvt/OcsPanels/wiki/tutor-debian
 
@@ -44,6 +59,9 @@ echo -e "\e[94m         Pre-Installation Setup Completed         "
 read -n1 -r -p "            Press Any Key To Continue"
 echo -e "\e[0m                                                  "
 
+#apt-get update
+apt-get update -y
+apt-get install build-essential expect -y
 
 echo "clear"                                                              >> .bashrc
 echo 'echo -e "                                                        "' >> .bashrc
@@ -57,8 +75,7 @@ echo 'echo -e "\e[94m   #########  ########## #########      ###       "' >> .ba
 echo 'echo -e "\e[94m        Deb7AutoScriptOCSv1 by _Dreyannz_         "' >> .bashrc
 echo 'echo -e "\e[0m                                                   "' >> .bashrc
 
-
-apt-get install -y mysql-server 
+apt-get install -y mysql-server
 
 #mysql_secure_installation
 so1=$(expect -c "
@@ -90,8 +107,8 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup 
 mv /etc/nginx/conf.d/vps.conf /etc/nginx/conf.d/vps.conf.backup 
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Dreyannz/Deb7AutoScriptOCSv1/master/nginx.conf" 
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Dreyannz/Deb7AutoScriptOCSv1/master/vps.conf" 
+wget -O /etc/nginx/nginx.conf "http://script.hostingtermurah.net/repo/blog/ocspanel-debian7/nginx.conf" 
+wget -O /etc/nginx/conf.d/vps.conf "http://script.hostingtermurah.net/repo/blog/ocspanel-debian7/vps.conf" 
 sed -i 's/cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php5/fpm/php.ini 
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 
@@ -106,7 +123,7 @@ service nginx restart
 
 apt-get -y install zip unzip
 cd /home/vps/public_html
-wget https://github.com/Dreyannz/Deb7AutoScriptOCSv1/raw/master/Deb7OCSv1.zip
+wget $source/Deb7OCSv1.zip
 unzip Deb7OCSv1.zip
 rm -f Deb7OCSv1.zip
 chown -R www-data:www-data /home/vps/public_html
@@ -153,10 +170,12 @@ echo -e "\e[94m                                                  "
 read -n1 -r -p "      If Youre Done Installing, Press Any Key"
 echo -e "\e[94m                                                  "
 echo -e "\e[94m            Are You Sure You Are Done?            "
-read -n1 -r -p "                  Press Any Key"
+read -n1 -r -p "           Press Any Key To Continue"
+echo -e "\e[94m                                                  "
+echo -e "\e[94m    We Will Now Delete The Installation Folder    "
+read -n1 -r -p "           Press Any Key To Continue"
 echo -e "\e[0m                                                  "
-
-
+rm -R /home/vps/public_html/installation
 
 cd /root
 #wget http://www.webmin.com/jcameron-key.asc
@@ -192,7 +211,8 @@ echo -e "\e[94m                                                  " | tee -a log-
 echo -e "\e[94m              Installation Complete               " | tee -a log-install.txt
 echo -e "\e[94m                                                  " | tee -a log-install.txt
 echo -e "\e[94m             Check Your OCS Panel Now             " | tee -a log-install.txt
-echo -e "\e[94m            http://$MYIP:85                       " | tee -a log-install.txt
+echo -e "\e[94m              http://$MYIP:85                     " | tee -a log-install.txt
 echo -e "\e[0m                                                  " | tee -a log-install.txt
 cd ~/
 
+#rm -f /root/ocspanel.sh
