@@ -26,9 +26,9 @@ read -p "     Select an option [1-2]: " option
         ;;
         2)
         clear
-        wget https://raw.githubusercontent.com/Dreyannz/Deb7AutoScriptOCS/master/Deb7_AutoScript_OCSv1
-        chmod +x Deb7_AutoScript_OCSv1
-        ./Deb7_AutoScript_OCSv1
+        wget https://raw.githubusercontent.com/Dreyannz/Deb7AutoScriptOCS/master/Deb7_AutoScript_OCSv2
+        chmod +x Deb7_AutoScript_OCSv2
+        ./Deb7_AutoScript_OCSv2
         exit
         ;;
   esac
