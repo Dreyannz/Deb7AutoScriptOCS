@@ -123,7 +123,7 @@ service nginx restart
 
 apt-get -y install zip unzip
 cd /home/vps/public_html
-wget $source/Deb7OCSv2.zip
+wget https://github.com/Dreyannz/Deb7AutoScriptOCS/raw/master/Deb7OCSv2.rar
 unzip Deb7OCSv2.zip
 rm -f Deb7OCSv2.zip
 chown -R www-data:www-data /home/vps/public_html
