@@ -1,4 +1,4 @@
-# Deb7AutoScriptOCSv1
+# Deb7AutoScriptOCS
 Deb7AutoScriptOCS is made by _Dreyannz_ to minimize the time consumed and user involvement in setting up your OCS Panel
 
 ## Versions Included in Deb7AutoScriptVPS
