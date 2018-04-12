@@ -150,7 +150,7 @@ echo -e "\e[94m                                                  "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m              PLEASE READ CAREFULLY               "
 echo -e "\e[94m                                                  "
-echo -e "\e[94m Open Browser and Access http://$MYIP:85/         "
+echo -e "\e[94m   Open Browser and Access http://$MYIP           "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m  Complete The Installation Using The Data Below  "
 echo -e "\e[94m                                                  "
@@ -212,7 +212,7 @@ echo -e "\e[94m                                                  " | tee -a log-
 echo -e "\e[94m              Installation Complete               " | tee -a log-install.txt
 echo -e "\e[94m                                                  " | tee -a log-install.txt
 echo -e "\e[94m             Check Your OCS Panel Now             " | tee -a log-install.txt
-echo -e "\e[94m              http://$MYIP:85                     " | tee -a log-install.txt
+echo -e "\e[94m                http://$MYIP                      " | tee -a log-install.txt
 echo -e "\e[0m                                                  " | tee -a log-install.txt
 cd ~/
 
