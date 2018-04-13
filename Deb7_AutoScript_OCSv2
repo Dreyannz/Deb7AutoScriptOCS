@@ -140,9 +140,9 @@ echo "$so2"
 #pass
 #CREATE DATABASE IF NOT EXISTS OCS_PANEL;EXIT;
 
-chmod 777 /home/fns/public_html/config
-chmod 777 /home/fns/public_html/config/inc.php
-chmod 777 /home/fns/public_html/config/route.php
+chmod 777 /home/vps/public_html/config
+chmod 777 /home/vps/public_html/config/inc.php
+chmod 777 /home/vps/public_html/config/route.php
 
 apt-get -y --force-yes -f install libxml-parser-perl
 
@@ -193,9 +193,9 @@ cd
 rm -f /root/.bash_history && history -c
 echo "unset HISTFILE" >> /etc/profile
 
-chmod 777 /home/fns/public_html/config
-chmod 777 /home/fns/public_html/config/inc.php
-chmod 777 /home/fns/public_html/config/route.php
+chmod 777 /home/vps/public_html/config
+chmod 777 /home/vps/public_html/config/inc.php
+chmod 777 /home/vps/public_html/config/route.php
 
 # info
 clear
