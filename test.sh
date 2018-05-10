@@ -23,7 +23,7 @@
 				echo -e "\e[0m                                                   "
 				echo -e "\e[94m            Connecting To Database...             "
 				echo -e "\e[0m                                                   "
-				sleep 0.5
+				sleep 3
 				clear
 				echo -e "                                                        "
 				echo -e "\e[94m   :::::::::  :::::::::: :::::::::  :::::::::::   "
@@ -34,7 +34,7 @@
 				echo -e "\e[94m   #+#    #+# #+#        #+#    #+#     #+#       "
 				echo -e "\e[94m   #########  ########## #########      ###       "
 				echo -e "\e[94m         Deb7AutoScriptVPS by _Dreyannz_          "
-				echo -e "\e[0m                                                   "
+				echo -e "\e[94m                                                   "
 				read -p "  Installation Password: " password
 				clear
                
@@ -77,8 +77,9 @@ then
 				echo -e "\e[94m                                                  "
 				echo -e "\e[91m         Incorrect Installation Password          "
 				echo -e "\e[91m       Please Send A Message To _Dreyannz_        "
+				echo -e "\e[91m              facebook.com/Dreyannz               "
 				echo -e "\e[0m                                                   "
-				read -p "What To Retry (y/n)? " answer
+				read -p "          What To Retry (y/n)? " answer
 				case ${answer:0:1} in
 				    y|Y )
 				        clear
@@ -86,6 +87,7 @@ then
 				    ;;
 				    * )
 				        clear
+					rm -f /root/pass.txt
 					rm -f /root/pass.txt
 					rm -f /root/.bash_history && history -c
 				    ;;
