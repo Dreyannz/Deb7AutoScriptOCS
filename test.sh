@@ -10,7 +10,8 @@
 
  red='\e[1;31m'
                green='\e[0;32m'
-               NC='\e[0m'
+               NC='\e[0m'	
+	       			clear
 				echo -e "                                                        "
 				echo -e "\e[94m   :::::::::  :::::::::: :::::::::  :::::::::::   "
 				echo -e "\e[94m   :+:    :+: :+:        :+:    :+: :+:     :+:   "
@@ -34,7 +35,7 @@
 				echo -e "\e[94m   #+#    #+# #+#        #+#    #+#     #+#       "
 				echo -e "\e[94m   #########  ########## #########      ###       "
 				echo -e "\e[94m         Deb7AutoScriptVPS by _Dreyannz_          "
-				echo -e "\e[94m                                                   "
+				echo -e "\e[0m                                                   "
 				read -p "  Installation Password: " password
 				clear
                
