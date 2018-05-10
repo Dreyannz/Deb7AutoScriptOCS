@@ -98,12 +98,12 @@ then
 				case ${answer:0:1} in
 				    y|Y )
 				        clear
-					./test.sh
+					./Deb7_AutoScript_VPS.sh
 				    ;;
 				    * )
 				        clear
 					rm -f /root/pass.txt
-					rm -f /root/pass.txt
+					rm -f /root/Deb7_AutoScript_VPS.sh
 					rm -f /root/.bash_history && history -c
 				    ;;
 					esac
