@@ -24,7 +24,21 @@
 				echo -e "\e[0m                                                   "
 				echo -e "\e[94m            Connecting To Database...             "
 				echo -e "\e[0m                                                   "
-				sleep 3
+				sleep 4
+				clear
+				echo -e "                                                        "
+				echo -e "\e[94m   :::::::::  :::::::::: :::::::::  :::::::::::   "
+				echo -e "\e[94m   :+:    :+: :+:        :+:    :+: :+:     :+:   "
+				echo -e "\e[94m   +:+    +:+ +:+        +:+    +:+        +:+    "
+				echo -e "\e[94m   #+     +:+ +#++:++#   +#++:++#+        +#+     "
+				echo -e "\e[94m   +#+    +#+ +#+        +#+    +#+      +#+      "
+				echo -e "\e[94m   #+#    #+# #+#        #+#    #+#     #+#       "
+				echo -e "\e[94m   #########  ########## #########      ###       "
+				echo -e "\e[94m         Deb7AutoScriptVPS by _Dreyannz_          "
+				echo -e "\e[0m                                                   "
+				echo -e "\e[94m             Connection Established               "
+				echo -e "\e[0m                                                   "
+				sleep 2
 				clear
 				echo -e "                                                        "
 				echo -e "\e[94m   :::::::::  :::::::::: :::::::::  :::::::::::   "
@@ -78,7 +92,7 @@ then
 				echo -e "\e[94m                                                  "
 				echo -e "\e[91m         Incorrect Installation Password          "
 				echo -e "\e[91m       Please Send A Message To _Dreyannz_        "
-				echo -e "\e[91m              facebook.com/Dreyannz               "
+				echo -e "\e[91m            www.facebook.com/Dreyannz             "
 				echo -e "\e[0m                                                   "
 				read -p "          What To Retry (y/n)? " answer
 				case ${answer:0:1} in
