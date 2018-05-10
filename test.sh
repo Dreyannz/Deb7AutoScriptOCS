@@ -50,7 +50,7 @@
 				echo -e "\e[94m   #########  ########## #########      ###       "
 				echo -e "\e[94m         Deb7AutoScriptVPS by _Dreyannz_          "
 				echo -e "\e[0m                                                   "
-				read -p "  Installation Password: " password
+				read -p "       Installation Password: " password
 				clear
                
 			   
