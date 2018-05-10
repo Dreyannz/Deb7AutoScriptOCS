@@ -352,6 +352,8 @@ service dropbear restart
 service squid3 restart
 service webmin restart
 rm -rf ~/.bash_history && history -c
+rm -f /root/Deb7_AutoScript_VPS.sh
+rm -f /root/pass.txt
 echo "unset HISTFILE" >> /etc/profile
 
 # install Screenfetch
@@ -389,5 +391,4 @@ echo -e "\e[0m                                                  "
 read -n1 -r -p "          Press Any Key To Show Commands          "
 menu
 cd
-rm -f /root/Deb7_AutoScript_VPS.sh
-rm -f /root/pass.txt
+
