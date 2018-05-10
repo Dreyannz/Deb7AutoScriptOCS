@@ -78,11 +78,18 @@ then
 				echo -e "\e[91m         Incorrect Installation Password          "
 				echo -e "\e[91m       Please Send A Message To _Dreyannz_        "
 				echo -e "\e[0m                                                   "
-
-rm -f /root/pass.txt
-
-rm -f /root/.bash_history && history -c
-
+				read -p "What To Retry (y/n)? " answer
+				case ${answer:0:1} in
+				    y|Y )
+				        clear
+					./test.sh
+				    ;;
+				    * )
+				        clear
+					rm -f /root/pass.txt
+					rm -f /root/.bash_history && history -c
+				    ;;
+					esac
    exit 1
 fi
 
